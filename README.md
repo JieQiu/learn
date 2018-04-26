@@ -1,5 +1,5 @@
 # learn
-@tmux：关闭窗口（control+b+d）
+@tmux：关闭窗口（control+b+d）<br>
 @bazel 安装用bash命令
 @拷贝：scp -r panboyuan@10.76.0.111:/home/panboyuan/code/DrQA/out .
 scp /Users/jieqiu/PycharmProjects/classo/trans.py qiujie@10.76.1.48:/home/qiujie/recent
