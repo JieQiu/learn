@@ -13,7 +13,7 @@ Step 4:<br>
 source ~/.bashrc<br>
 
 开始：引用https://github.com/tensorflow/models/tree/master/research/skip_thoughts<br>
-1Prepare the Training Data<br>
+### 1Prepare the Training Data<br>
 #each sentence is already tokenized.<br>
 INPUT_FILES="${HOME}/model/skip_thoughts/bookcorpus/*.txt"#实际地址<br>
 #Location to save the preprocessed training and validation data.<br>
