@@ -14,11 +14,11 @@ source ~/.bashrc<br>
 
 开始：引用https://github.com/tensorflow/models/tree/master/research/skip_thoughts<br>
 1Prepare the Training Data<br>
-# each sentence is already tokenized.<br>
+#each sentence is already tokenized.<br>
 INPUT_FILES="${HOME}/model/skip_thoughts/bookcorpus/*.txt"#实际地址<br>
-# Location to save the preprocessed training and validation data.<br>
+#Location to save the preprocessed training and validation data.<br>
 DATA_DIR="${HOME}/model/skip_thoughts/data"<br>
-# Build the preprocessing script.<br>
+#Build the preprocessing script.<br>
 cd tensorflow-models/skip_thoughts<br>
 bazel build -c opt //skip_thoughts/data:preprocess_dataset#注意这里是相对WORKSPACE地址<br>
 source activate tensorflow<br>
