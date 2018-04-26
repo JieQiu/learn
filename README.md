@@ -1,4 +1,5 @@
 # learn
+```shell
 @tmux：关闭窗口（control+b+d）<br>
 @bazel 安装用bash命令<br>
 @拷贝：scp -r panboyuan@10.76.0.111:/home/panboyuan/code/DrQA/out .<br>
@@ -9,3 +10,4 @@ scp /Users/jieqiu/PycharmProjects/classo/trans.py qiujie@10.76.1.48:/home/qiujie
 删除文件使用实例：<br>
 rm -f /var/log/httpd/access.log将会强制删除/var/log/httpd/access.log这个文件<br>
 @查看历史命令：vi ~/.bash_history<br>
+```
