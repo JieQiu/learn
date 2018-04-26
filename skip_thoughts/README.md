@@ -1,4 +1,4 @@
-#安装bazelhttps://docs.bazel.build/versions/master/install-ubuntu.html#install-with-installer-ubuntu<br>
+		#安装bazelhttps://docs.bazel.build/versions/master/install-ubuntu.html#install-with-installer-ubuntu
 Step 1: Download Bazel<br>
 proxychains wget https://github.com/bazelbuild/bazel/releases/download/0.12.0/bazel-0.12.0-installer-linux-x86_64.sh<br>
 Step 2: Run the installer<br>
