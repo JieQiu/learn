@@ -15,7 +15,7 @@ source ~/.bashrc
 ```
 bazel：https://blog.csdn.net/elaine_bao/article/details/78668657
 几点理解：BUILD是把文件依赖关系写清楚
-bazel build -c编译。bazel-bin/运行(在进入有bazel-bin的文件下，执行地址也是平行相对的地址)。
+bazel build -c编译。(注意这里是平行相对WORKSPACE地址)bazel-bin/运行(在进入有bazel-bin的文件下，执行地址也是平行相对的地址)。
 
 开始：引用https://github.com/tensorflow/models/tree/master/research/skip_thoughts
 ### 1Prepare the Training Data
@@ -28,7 +28,7 @@ INPUT_FILES="${HOME}/model/skip_thoughts/bookcorpus/*.txt"#实际地址
 #Location to save the preprocessed training and validation data.
 DATA_DIR="${HOME}/model/skip_thoughts/data"
 #Build the preprocessing script.
-cd tensorflow-models/skip_thoughts
+cd model/skip_thoughts
 bazel build -c opt //skip_thoughts/data:preprocess_dataset#注意这里是平行相对WORKSPACE地址
 source activate tensorflow
 bazel-bin/skip_thoughts/data/preprocess_dataset   --input_files=${INPUT_FILES}   --output_dir=${DATA_DIR}#也是相对地址
