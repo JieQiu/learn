@@ -19,9 +19,9 @@ bazel build -c编译。bazel-bin/运行(在进入有bazel-bin的文件下，执�
 
 开始：引用https://github.com/tensorflow/models/tree/master/research/skip_thoughts
 ### 1Prepare the Training Data
-路径/home/qiujie/model/skipthoughts/...
-数据/home/qiujie/model/skipthoughts/bookcorpus-->/home/qiujie/model/skipthoughts/data
-/home/qiujie/model/bazel-bin
+路径/home/qiujie/model/skipthoughts/...<br>
+数据/home/qiujie/model/skipthoughts/bookcorpus-->/home/qiujie/model/skipthoughts/data<br>
+/home/qiujie/model/bazel-bin<br>
 ```shell
 #each sentence is already tokenized.
 INPUT_FILES="${HOME}/model/skip_thoughts/bookcorpus/*.txt"#实际地址
