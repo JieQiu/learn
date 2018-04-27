@@ -33,7 +33,7 @@ bazel build -c opt //skip_thoughts/data:preprocess_dataset#注意这里是平行
 source activate tensorflow
 bazel-bin/skip_thoughts/data/preprocess_dataset   --input_files=${INPUT_FILES}   --output_dir=${DATA_DIR}#也是相对地址
 ```
-### Run the Training Script
+### 2Run the Training Script
 ```
 # Directory containing the preprocessed data.
 DATA_DIR="${HOME}/model/skip_thoughts/data"
