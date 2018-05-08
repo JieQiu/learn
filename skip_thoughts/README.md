@@ -53,7 +53,9 @@ bazel-bin/skip_thoughts/train   --input_file_pattern="${DATA_DIR}/train-?????-of
 ```
 DATA_DIR="${HOME}/model/skip_thoughts/data"
 MODEL_DIR="${HOME}/model/skip_thoughts/save_model"
+
 export CUDA_VISIBLE_DEVICES="0,1"
+
 bazel-bin/skip_thoughts/track_perplexity \
   --input_file_pattern="${DATA_DIR}/validation-?????-of-00001" \
   --checkpoint_dir="${MODEL_DIR}/train" \
