@@ -34,7 +34,7 @@ source activate tensorflow
 bazel-bin/skip_thoughts/data/preprocess_dataset   --input_files=${INPUT_FILES}   --output_dir=${DATA_DIR}#也是相对地址
 ```
 ### 2Run the Training Script
-```
+```shell
 # Directory containing the preprocessed data.
 DATA_DIR="${HOME}/model/skip_thoughts/data"
 
@@ -50,7 +50,7 @@ source activate tensorflow
 bazel-bin/skip_thoughts/train   --input_file_pattern="${DATA_DIR}/train-?????-of-00100"   --train_dir="${MODEL_DIR}/train"
  ```
 ### 3Track Training Progress
-```
+```shell
 DATA_DIR="${HOME}/model/skip_thoughts/data"
 MODEL_DIR="${HOME}/model/skip_thoughts/save_model"
 
