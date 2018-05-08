@@ -49,6 +49,22 @@ bazel build -c opt //skip_thoughts/...#编译BUILD里面所有文件
 source activate tensorflow
 bazel-bin/skip_thoughts/train   --input_file_pattern="${DATA_DIR}/train-?????-of-00100"   --train_dir="${MODEL_DIR}/train"
  ```
+# Track Training Progress
+```
+DATA_DIR="${HOME}/model/skip_thoughts/data"
+MODEL_DIR="${HOME}/model/skip_thoughts/save_model"
+export CUDA_VISIBLE_DEVICES="0,1"
+bazel-bin/skip_thoughts/track_perplexity \
+  --input_file_pattern="${DATA_DIR}/validation-?????-of-00001" \
+  --checkpoint_dir="${MODEL_DIR}/train" \
+  --eval_dir="${MODEL_DIR}/val" \
+  --num_eval_examples=50000
+
+If you started the track_perplexity script, run a TensorBoard server in a separate process for real-time monitoring of training summaries and validation perplexity.
+# Run a TensorBoard server.
+MODEL_DIR="${HOME}/model/skip_thoughts/save_model"
+tensorboard --logdir="${MODEL_DIR}"
+```
 
 
 
