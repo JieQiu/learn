@@ -49,7 +49,7 @@ bazel build -c opt //skip_thoughts/...#编译BUILD里面所有文件
 source activate tensorflow
 bazel-bin/skip_thoughts/train   --input_file_pattern="${DATA_DIR}/train-?????-of-00100"   --train_dir="${MODEL_DIR}/train"
  ```
-# Track Training Progress
+### 3Track Training Progress
 ```
 DATA_DIR="${HOME}/model/skip_thoughts/data"
 MODEL_DIR="${HOME}/model/skip_thoughts/save_model"
