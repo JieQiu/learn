@@ -71,7 +71,7 @@ tensorboard --logdir="${MODEL_DIR}"
 ```shell
 Download Pretrained Models
 # Directory to download the pretrained models to.
-PRETRAINED_MODELS_DIR="${HOME}/skip_thoughts/pretrained/"
+PRETRAINED_MODELS_DIR="${HOME}/model/skip_thoughts/pretrained/"
 
 mkdir -p ${PRETRAINED_MODELS_DIR}
 cd ${PRETRAINED_MODELS_DIR}
