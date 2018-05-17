@@ -28,8 +28,8 @@ INPUT_FILES="${HOME}/model/skip_thoughts/bookcorpus/*.txt"#实际地址
 #Location to save the preprocessed training and validation data.
 DATA_DIR="${HOME}/model/skip_thoughts/data"
 #Build the preprocessing script.
-cd model/skip_thoughts
-bazel build -c opt //skip_thoughts/data:preprocess_dataset#注意这里是平行相对WORKSPACE地址
+cd model/skip_thoughts#也许是cd model
+bazel build -c opt //skip_thoughts/data:preprocess_dataset#注意这里是平行,相对WORKSPACE地址
 source activate tensorflow
 bazel-bin/skip_thoughts/data/preprocess_dataset   --input_files=${INPUT_FILES}   --output_dir=${DATA_DIR}#也是相对地址
 ```
@@ -109,10 +109,11 @@ EMBEDDINGS_FILE="${HOME}/model/skip_thoughts/pretrained/skip_thoughts_uni_2017_0
 EVAL_DATA_DIR="${HOME}/model/skip_thoughts/eval_data"
 
 # Build the evaluation script.
-cd tensorflow-models/skip_thoughts
-bazel build -c opt //skip_thoughts:evaluate
+cd model/skip_thoughts
+bazel build -c opt //skip_thoughts:evaluate#注意这里是平行相对WORKSPACE地址
 
 # Run the evaluation script.
+cd model
 bazel-bin/skip_thoughts/evaluate \
   --eval_task=CR \
   --data_dir=${EVAL_DATA_DIR} \
