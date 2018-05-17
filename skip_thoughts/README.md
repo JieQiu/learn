@@ -67,6 +67,19 @@ If you started the track_perplexity script, run a TensorBoard server in a separa
 MODEL_DIR="${HOME}/model/skip_thoughts/save_model"
 tensorboard --logdir="${MODEL_DIR}"
 ```
+### 4Evaluating a Model
+```shell
+Download Pretrained Models
+# Directory to download the pretrained models to.
+PRETRAINED_MODELS_DIR="${HOME}/skip_thoughts/pretrained/"
 
+mkdir -p ${PRETRAINED_MODELS_DIR}
+cd ${PRETRAINED_MODELS_DIR}
+
+# Download and extract the unidirectional model.
+wget "http://download.tensorflow.org/models/skip_thoughts_uni_2017_02_02.tar.gz"
+tar -xvf skip_thoughts_uni_2017_02_02.tar.gz
+rm skip_thoughts_uni_2017_02_02.tar.gz
+```
 
 
