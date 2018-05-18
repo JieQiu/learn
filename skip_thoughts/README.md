@@ -113,6 +113,12 @@ cd model
 bazel build -c opt //skip_thoughts:evaluate#注意这里是平行相对WORKSPACE地址
 
 # Run the evaluation script.
+#set up keras
+pip install keras
+#set up SciPy 
+python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+#set up 
+conda install scikit-learn(pip install -U scikit-learn)
 cd model
 bazel-bin/skip_thoughts/evaluate \
   --eval_task=CR \
