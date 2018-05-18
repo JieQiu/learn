@@ -109,7 +109,7 @@ EMBEDDINGS_FILE="${HOME}/model/skip_thoughts/pretrained/skip_thoughts_uni_2017_0
 EVAL_DATA_DIR="${HOME}/model/skip_thoughts/eval_data"
 
 # Build the evaluation script.
-cd model/skip_thoughts
+cd model
 bazel build -c opt //skip_thoughts:evaluate#注意这里是平行相对WORKSPACE地址
 
 # Run the evaluation script.
