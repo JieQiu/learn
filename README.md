@@ -10,4 +10,6 @@ scp /Users/jieqiu/PycharmProjects/classo/trans.py qiujie@10.76.1.48:/home/qiujie
 删除文件使用实例：
 rm -f /var/log/httpd/access.log将会强制删除/var/log/httpd/access.log这个文件
 @查看历史命令：vi ~/.bash_history
+@下载安装tensorflow
+proxychains python -m pip install tensorflow==1.2.0
 ```
