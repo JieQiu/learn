@@ -127,8 +127,65 @@ bazel-bin/skip_thoughts/evaluate \
   --uni_vocab_file=${VOCAB_FILE} \
   --uni_embeddings_file=${EMBEDDINGS_FILE} \
   --uni_checkpoint_path=${CHECKPOINT_PATH}
-  #报错TypeError: softmax() got an unexpected keyword argument 'axis'
+ #报错TypeError: softmax() got an unexpected keyword argument 'axis'
+ 原因：keras 2.1.6的softmax没有axis这个参数了
 ~/model$ pip install keras==2.1
+```
+#### TREC Question-Type Classification
+```shell
+Download the dataset from http://cogcomp.cs.illinois.edu/Data/QA/QC/ (train_5500.label and TREC_10.label) 
+bazel-bin/skip_thoughts/evaluate \
+  --eval_task=TREC \
+  --data_dir=${EVAL_DATA_DIR} \
+  --uni_vocab_file=${VOCAB_FILE} \
+  --uni_embeddings_file=${EMBEDDINGS_FILE} \
+  --uni_checkpoint_path=${CHECKPOINT_PATH}
+```
+#### Semantic-Relatedness(SICK)
+```shell
+data from http://alt.qcri.org/semeval2014/task1/index.php?id=data-and-tools
+(wget http://alt.qcri.org/semeval2014/task1/data/uploads/sick_test_annotated.zip
+wget http://alt.qcri.org/semeval2014/task1/data/uploads/sick_train.zip
+wget http://alt.qcri.org/semeval2014/task1/data/uploads/sick_trial.zip)
+bazel-bin/skip_thoughts/evaluate \
+  --eval_task=SICK \
+  --data_dir=${EVAL_DATA_DIR} \
+  --uni_vocab_file=${VOCAB_FILE} \
+  --uni_embeddings_file=${EMBEDDINGS_FILE} \
+  --uni_checkpoint_path=${CHECKPOINT_PATH}
+```
+#### Paraphrase Detection(MSRP)
+```shell
+Download the Microsoft Research Paraphrase Corpus and put it in the data directory. There should be two files, msr_paraphrase_train.txt and msr_paraphrase_test.txt. https://www.microsoft.com/en-us/download/confirmation.aspx?id=52398
+bazel-bin/skip_thoughts/evaluate \
+  --eval_task=MSRP \
+  --data_dir=${EVAL_DATA_DIR} \
+  --uni_vocab_file=${VOCAB_FILE} \
+  --uni_embeddings_file=${EMBEDDINGS_FILE} \
+  --uni_checkpoint_path=${CHECKPOINT_PATH}
+```
+#### sentence polarity dataset(MR) subjectivity dataset(SUBJ)
+```shell
+Download https://www.cs.cornell.edu/people/pabo/movie-review-data/
+MR:https://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz
+SUBJ:http://www.cs.cornell.edu/people/pabo/movie-review-data/rotten_imdb.tar.gz
+bazel-bin/skip_thoughts/evaluate \
+  --eval_task=MSRP \
+  --data_dir=${EVAL_DATA_DIR} \
+  --uni_vocab_file=${VOCAB_FILE} \
+  --uni_embeddings_file=${EMBEDDINGS_FILE} \
+  --uni_checkpoint_path=${CHECKPOINT_PATH}
+```
+#### MPQA
+```shell
+Download http://nlp.stanford.edu/%7Esidaw/home/projects:nbsvm
+(mpqa.neg mpqa.pos)
+bazel-bin/skip_thoughts/evaluate \
+  --eval_task=MPQA \
+  --data_dir=${EVAL_DATA_DIR} \
+  --uni_vocab_file=${VOCAB_FILE} \
+  --uni_embeddings_file=${EMBEDDINGS_FILE} \
+  --uni_checkpoint_path=${CHECKPOINT_PATH}
 ```
 
 
