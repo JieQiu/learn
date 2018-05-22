@@ -127,6 +127,8 @@ bazel-bin/skip_thoughts/evaluate \
   --uni_vocab_file=${VOCAB_FILE} \
   --uni_embeddings_file=${EMBEDDINGS_FILE} \
   --uni_checkpoint_path=${CHECKPOINT_PATH}
+  #报错TypeError: softmax() got an unexpected keyword argument 'axis'
+~/model$ pip install keras==2.1
 ```
 
 
